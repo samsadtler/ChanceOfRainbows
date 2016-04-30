@@ -1,0 +1,43 @@
+{"answer":{
+	"lowest":{
+		"response":	[
+		"No, ",
+		"but you probably want these hip shades",
+		"but you probaly wish you did" 
+		],
+		"icon":"sunglasses-alt.gif"
+		},
+	"low":{
+		"response":	[
+			"No, ", 
+			"but we're betting our umbrella, that you won't need yours just in case" , 
+			"we could tell you didn't want to bring it today"
+		],
+		"icon":"umbrella"
+		},
+	"medium":{
+		"response":[
+			"Yes, ", 
+			"we're betting our Umbrella, that you will need yours",
+			"but it's not our fault if it doesn't"
+			],
+		"icon":"umbrella"
+		},
+	"high":{
+		"response":[
+			"Yes, ", 
+			"or just never leave your house",
+			"I mean we just don't want to look like dicks when it dump buckets on your head"
+			],
+		"icon":"umbrella"
+		},
+	"highest":{
+		"response":[
+			"Yes, ",
+			"because its going to rain on you if you don't bring it",
+			"but you might get to see a rainbow"
+			],
+		"icon":"umbrella"
+		}
+	}
+}

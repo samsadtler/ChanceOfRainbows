@@ -1,0 +1,43 @@
+{"answer":{
+	"lowest":{
+		"response":	[
+		"No, ",
+		"its just sunny out",
+		"but looks to be a glorious day!" 
+		],
+		"icon":"sunglasses-alt.gif"
+		},
+	"low":{
+		"response":	[
+			"No, ", 
+			"but we're betting our umbrella, that you won't need yours (just in case)" , 
+			"we could tell you weren't that into the idea"
+		],
+		"icon":"umbrella"
+		},
+	"medium":{
+		"response":[
+			"Yes, ", 
+			"there a chance",
+			"but it's not our fault if you don't see one"
+			],
+		"icon":"umbrella"
+		},
+	"high":{
+		"response":[
+			"Yes, ", 
+			"only if your leave your house",
+			"I mean we just don't want to look like dicks when it dump buckets on your head"
+			],
+		"icon":"umbrella"
+		},
+	"highest":{
+		"response":[
+			"Yes, ",
+			"be sure to peak out from under the umbrella",
+			"we like your chance of rainbows"
+			],
+		"icon":"umbrella"
+		}
+	}
+}

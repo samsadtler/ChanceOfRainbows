@@ -1,0 +1,29 @@
+/* Rectangle 1: */
+background: #D8F1F9;
+border: 1px solid #979797;
+/* Mask: */
+/* rainbow-fillled: */
+opacity: 0.6;
+border: 1px solid #979797;
+box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50), inset 0px 1px 3px 0px rgba(0,0,0,0.50);
+/* 100%: */
+font-family: AvenirNext-Bold;
+font-size: 64px;
+color: #9B9B9B;
+/* Chance Of Rainbows: */
+font-family: AvenirNext-DemiBold;
+font-size: 24px;
+color: #9B9B9B;
+/* Path 1: */
+background: #D8D8D8;
+border: 1px solid #979797;
+box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50), inset 0px 1px 3px 0px rgba(0,0,0,0.50);
+/* Be sure to: */
+font-family: AvenirNext-Bold;
+font-size: 24px;
+color: #9B9B9B;
+/* : */
+font-family: AppleColorEmoji;
+font-size: 48px;
+color: #000000;
+/* Status Bar/Black/100%: */
