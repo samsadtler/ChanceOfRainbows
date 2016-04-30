@@ -27,7 +27,7 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
-        // alert('app.init')
+        alert('app.init')
     },
     // Bind Event Listeners
     //
@@ -283,12 +283,12 @@ var app = {
                 rainbowChance = "Its the wrong time of day!";
                 return app.addCard(rainbowChance, shortAnswer, longAnswer)
             }
-        }
-        }); 
             console.log('sunCondition: ', sunCondition, "cloudCover: ", cloudCover, "precipitationChance: ", precipitationChance )
             console.log("The chanceofrainbows is, ", rainbowChance)
-        // jQuery('.rainbow-chance').text(rainbowChance);
+        }
+         
         
+        });
     },
     referenceComparison: function(sunAngle, observerAngle){
         console.log('comparison commence')
@@ -322,32 +322,32 @@ var app = {
             return alert("Geolocation is not supported by this browser.");
         }
     },
-    geoCodeIt: function(location){
-        console.log("geoCodeIt");
-        var apiKey = 'AIzaSyCIxywgknotMlV6Kjqn-HbJgQBkSAMPOlU';
+    // geoCodeIt: function(location){
+    //     console.log("geoCodeIt");
+    //     var apiKey = 'AIzaSyCIxywgknotMlV6Kjqn-HbJgQBkSAMPOlU';
 
-        // make a request to geocode the location
-        jQuery.ajax({
-            url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+location+'&key='+apiKey,
-            type: 'GET',
-            failure: function(err){
-                return alert ("Could not find that location");
-            },
-            success: function(response) {
+    //     // make a request to geocode the location
+    //     jQuery.ajax({
+    //         url: 'https://maps.googleapis.com/maps/api/geocode/json?address='+location+'&key='+apiKey,
+    //         type: 'GET',
+    //         failure: function(err){
+    //             return alert ("Could not find that location");
+    //         },
+    //         success: function(response) {
 
-              console.log('the geocode response is -- >');
-              console.log(response);
+    //           console.log('the geocode response is -- >');
+    //           console.log(response);
               
-              if(response.status=="ZERO_RESULTS") return alert ("Could not find that location");
+    //           if(response.status=="ZERO_RESULTS") return alert ("Could not find that location");
 
-              // now that we have the lat/lon details, can get the weather
-              var lat = response.results[0].geometry.location.lat;
-              var lon = response.results[0].geometry.location.lng;
-              console.log('lat and lon from geomentry google balls: ', lat, ' ',lon )
-              // return app.getTheWeatherAPI(location, lat, lon);
-            }
-        });
-    },
+    //           // now that we have the lat/lon details, can get the weather
+    //           var lat = response.results[0].geometry.location.lat;
+    //           var lon = response.results[0].geometry.location.lng;
+    //           console.log('lat and lon from geomentry google balls: ', lat, ' ',lon )
+    //           // return app.getTheWeatherAPI(location, lat, lon);
+    //         }
+    //     });
+    // },
 
     getTheWeatherAPI: function(location, lat, lon){
         console.log('getTheWeatherAPI')
@@ -426,15 +426,13 @@ var app = {
 
     addCard: function(rainbowChance, shortAnswer, longAnswer){
         jQuery('.short-answer').text(shortAnswer);
-        var chevronToAppend = 
-            '<ul class="down-arrow col-sx-12 centered">'+
-              '<li>'+  
-                  '<p class="rainbow-chance">'+ rainbowChance +'</p>'+
-              '</li>'+
-            '</ul>';
-        jQuery('.arrow').append(chevronToAppend);   
+        var chanceToAppend = 
+             
+                  '<p class=" text-centered rainbow-chance">'+ rainbowChance +'</p>';
+           
+        jQuery('.rainbow-chance').append(chanceToAppend);   
         var htmlToAppend = 
-        '<div class="card-container col-sx-1 centered">'+
+        '<div class="card-container col-sx-12 centered">'+
             '<div class="card">'+
                     // '<img src="img/'+icon+'" class="img-responsive">'+
                 '<h1>'+longAnswer+'</h1>'+
