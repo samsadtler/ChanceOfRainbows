@@ -21,6 +21,7 @@ var precipitationChance;
 var precipitationIntensity;
 var windSpeed;
 var sunCondition;
+var sunAngle;
 var cloudCover;
 var forecastObject;
 var app = {
@@ -169,7 +170,7 @@ var app = {
                 success : function(response) {
 
                     console.log("calculation response", response);
-                    var sunAngle = response.degrees;
+                    sunAngle = response.degrees;
                     var observerAngle = app.geometryPowerHorizon(alt);
                     console.log('angles returned: ' , sunAngle , '<- sun --- observer -> ' ,observerAngle)
                     app.referenceComparison(sunAngle, observerAngle);
@@ -203,7 +204,7 @@ var app = {
                 if (cloudCover > .9 && precipitationChance < .1) {
                     console.log("don't count on it")
                     rainbowChance = "Don't Hold Your Breath";
-                    outcome = window.out.answer.lowest;
+                    outcome = window.out.answer.cloudy;
                 } 
                 if (cloudCover < .9 && precipitationChance > .1) {
                     console.log('10%')
@@ -265,11 +266,20 @@ var app = {
             }
             
             if(!sunCondition) {
-                answerArray = window.out.answer.night.response;
+                if(sunAngle < 0){
+                    answerArray = window.out.answer.night.response;
                 shortAnswer = answerArray[0];
                 longAnswer = answerArray[app.getRandomInt(1, answerArray.length)]
-                rainbowChance = "Try again later in the day!";
+                rainbowChance = "Try again tomorrow!";
                 return app.addCard(rainbowChance, shortAnswer, longAnswer)
+                }
+                else {
+                    answerArray = window.out.answer.midday.response;
+                    shortAnswer = answerArray[0];
+                    longAnswer = answerArray[app.getRandomInt(1, answerArray.length)]
+                    rainbowChance = "Try again later in the day!";
+                    return app.addCard(rainbowChance, shortAnswer, longAnswer)
+                }
             }
             console.log('sunCondition: ', sunCondition, "cloudCover: ", cloudCover, "precipitationChance: ", precipitationChance )
             console.log("The chanceofrainbows is, ", rainbowChance)
@@ -279,8 +289,8 @@ var app = {
         });
     },
     referenceComparison: function(sunAngle, observerAngle){
-        console.log('comparison commence')
         var rainbowAngle = 42.3; // angle of rainbow from shadow hypotenuse (deg)
+        console.log('comparison commence sunAngle vs observerAngle:', sunAngle,'vs ', observerAngle , ' rainbow', observerAngle+rainbowAngle)   
         if(sunAngle < (observerAngle + rainbowAngle) && sunAngle > 0){
             console.log('Theresome chance of rainbow!')
             return sunCondition = true;

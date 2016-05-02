@@ -157,6 +157,11 @@ h1 {
 #transition img:hover {
      background-position: -100% 100%;    
 }
+.container-fluid{
+  padding-right: 25px;
+  padding-left: 25px;
+  overflow-x: hidden;
+}
 .chevron{
   font-size: 60px;
   /*font-weight: 900;*/

@@ -42,10 +42,23 @@
 	"night":{
 			"response":[
 				"No, ",
-				"though their could be a lunar rainbow, let us know!",
-				"but how about this rainbow?"
+				"though their could be a lunar rainbow, let us know!"
 				],
 			"icon":"spiral-rainbow.gif"
-			}
-		}
+			},
+	"midday":{
+			"response":[
+				"No, ",
+				"the sun is to high in the sky!"
+				],
+			"icon":"spiral-rainbow.gif"
+		},
+	"cloudy":{
+		"response":[
+			"No, ",
+			"its just a bit to cloudy"
+			],
+		"icon":"spiral-rainbow.gif"
+	}
+	}
 }
