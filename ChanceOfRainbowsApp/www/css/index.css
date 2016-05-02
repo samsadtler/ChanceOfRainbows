@@ -14,7 +14,7 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#D8D8D8;
+    background-color:lightblue;
     color: white;
    /* background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
     background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
@@ -156,35 +156,41 @@ h1 {
 #transition img:hover {
      background-position: -100% 100%;    
 }
-body {
-  background: lightblue;
-}
-
 .pos {
-  position: absolute;
+/*     position: absolute;
   width: 96%;
   bottom: 25%;
-  left: 0%;
+  left: 0%; */
 }
 
 .offset {
   float: left;
-}
 
+/*     position: relative; */
+/*     top:10%; */
+  /*   left:10%; */
+}
+.col-sm-12{
+/*   padding-left:0;
+  padding-right:0; */
+}
 .red-circle {
   width: 50%;
-  /*position: relative;*/
-  left: 0%;
+
+  /*   position: relative; */
+  /*   left: 0%; */
 }
 
 .red-circle:after {
   background: red;
+  
 }
 
 .orange-circle {
-  width: 48%;
-  /*position: relative;*/
-  left: 4%;
+  width: 90% ;
+  height: 90% ;
+  margin-top: 10%;
+ 
 }
 
 .orange-circle:after {
@@ -192,9 +198,9 @@ body {
 }
 
 .yellow-circle {
-  width: 44%;
-  /*position: relative;*/
-  left: 8%;
+  width: 90% !important;
+  height: 90% !important;
+  margin-top: 10%;
 }
 
 .yellow-circle:after {
@@ -202,9 +208,9 @@ body {
 }
 
 .green-circle {
-  width: 40%;
-  /*position: relative;*/
-  left: 12%;
+  width: 90% !important;
+  height: 90% !important;
+  margin-top: 10%;
 }
 
 .green-circle:after {
@@ -212,46 +218,51 @@ body {
 }
 
 .blue-circle {
-  width: 36%;
-  /*position: relative;*/
-  left: 16%;
+  width: 90% !important;
+  height: 90% !important;
+  margin-top: 10%;
 }
 
 .blue-circle:after {
   background: blue;
 }
+
 .purple-circle {
-  width: 32%;
-  /*position: relative;*/
-  left: 20%;
+  width: 90% !important;
+  height: 90% !important;
+  margin-top: 10%;
 }
 
 .purple-circle:after {
   background: purple;
 }
+
 .violet-circle {
-  width: 28%;
-  /*position: relative;*/
-  left: 24%;
+  width: 90% !important;
+  height: 90% !important;
+  margin-top: 10%;
 }
 
 .violet-circle:after {
   background: violet;
 }
+
 .lightblue-circle {
-  width: 24%;
+  width: 90% !important;
+  height: 90% !important;
+  margin-top: 10%;
   position: relative;
-  left: 28%;
+  left:60%;
+
 }
 
 .lightblue-circle:after {
   background: lightblue;
 }
+
 .left-circle:after {
   content: "";
   display: block;
-  height: 50%;
-  width: 100%;
   padding-bottom: 100%;
   -moz-border-radius: 100% 0 0 0;
   -webkit-border-radius: 100% 0 0 0;
@@ -259,30 +270,12 @@ body {
 }
 
 .left-circle div {
-  float: left;
-  width: 100%;
-  padding-top: 50%;
+  margin-left:4%;
 }
-.down-arrow{
-  position: absolute;
-  top: 83%;
-  width: 100%;
-  margin-left: -52px;
-}
-.down-arrow li{
-  /*float: left;*/
-  list-style: none;
-  font-size: 50px;
-}
-.arrow{
-  opacity: 1;
-}
+
 .right-circle:after {
   content: "";
   display: block;
-  float: left;
-  height: 50%;
-  width: 100%;
   padding-bottom: 100%;
   -moz-border-radius: 0 100% 0 0;
   -webkit-border-radius: 0 100% 0 0;
@@ -290,21 +283,35 @@ body {
 }
 
 .right-circle div {
-  float: left;
-  width: 100%;
-  padding-top: 50%;
-  line-height: 1em;
-  margin-top: -0.5em;
-  text-align: center;
-  color: white;
+
+    margin-top: 10%;
+   margin-left:-6.25%;
+
 }
 
-.rainbow-chance{
+.rainbow-chance {
   font-size: 40px;
 }
 
-#mainer{
-/*  position: absolute;
+.down-arrow {
+  position: absolute;
+  top: 83%;
+  width: 100%;
+  margin-left: -52px;
+}
+
+.down-arrow li {
+
+  list-style: none;
+  font-size: 50px;
+}
+
+.arrow {
+  opacity: 1;
+}
+
+#mainer {
+  /*  position: absolute;
   width: 100%;
   height: 100%;*/
 }
