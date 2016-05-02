@@ -38,6 +38,14 @@
 			"we like your chance of rainbows"
 			],
 		"icon":"umbrella"
+		},
+	"night":{
+			"response":[
+				"No, ",
+				"though their could be a lunar rainbow, let us know!",
+				"but how about this rainbow?"
+				],
+			"icon":"spiral-rainbow.gif"
+			}
 		}
-	}
 }
